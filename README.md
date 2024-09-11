@@ -34,13 +34,13 @@ The necessary items to reproduce our evaluation are listed, including benchmark 
 
 There are 3 benchmarks in our evaluation: GSL (`bench-gsl`) and Cephes (`bench-cephes`) that contains complex non-linear floating-point conditions, and FDLIBM (`bench-fdlibm`) where most programs only contain linear conditions. Hence, we provide a script to reproduce experimental results on these 3 benchmarks. 
 
-In view of the long running time of our evaluation, the scripts try to perform all experiments in parallel. Specifically, the scripts take a user-defined value *n* and exploit at most *n* processes of working machine at run time. The value should be carefully considered to avoid resource exhaustion. In our evaluation, *n* is 70, since all experiments were performed on a 80-core server with 192GB memory.
+In view of the long running time of our evaluation, the scripts try to perform all experiments in parallel. Specifically, the scripts take a user-defined value *n* and exploit at most *n* processes of working machine at run time. The value should be carefully considered to avoid resource exhaustion. In our evaluation, *n* is 80, since all experiments were performed on a 104-core server with 192GB memory.
 
 **Reproduce experimental results:**
 
 ```bash
 # python3 run_expr.py <parallel num> <execute time>
-$ nohup python3 run_expr.py 70 1800 &  
+$ nohup python3 run_expr.py 80 1800 &  
 # wait......
 ```
 
